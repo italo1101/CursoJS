@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation</title>
+  <style>
+    nav {
+      background-color: #f4f4f4;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    nav a {
+      margin-right: 10px;
+      text-decoration: none;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="./" id="home">Home</a>
+  <a href="./produto.html" id="produto">Produto</a>
+  <a href="./contato.html" id="contato">Contato</a>
+</nav>
+
+<script>
+  function ativarLink() {
+    let links = document.querySelectorAll('nav a');
+    let currentPageURL = window.location.href;
+
+    links.forEach(function(link) {
+      if (link.href === currentPageURL) {
+        link.style.backgroundColor = 'black';
+        link.style.color = 'white';
+      }
+    });
+  }
+
+  ativarLink();
+</script>
+
+</body>
+</html>
